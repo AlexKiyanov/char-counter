@@ -10,11 +10,11 @@ import java.util.Scanner;
 
 public class CharacterCountingApplication {
     public static void main(String[] args) {
-        final int cacheSize = 10;
+        final int CACHE_SIZE = 10;
         final StaticsProvider staticsProvider = new StaticsProvider(new CharCountProviderImpl(),
                 new CharCountViewProviderImpl(),
                 new StringValidatorImpl(),
-                new LRUCacheProvider(cacheSize));
+                new LRUCacheProvider(CACHE_SIZE));
 
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Waiting your string: ");
